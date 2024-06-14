@@ -1,9 +1,10 @@
 import React from 'react';
+import '../styles.css'; 
 
 function Footer() {
   return (
-    <footer>
-      <p>&copy; 2024 Notícias App</p>
+    <footer className="footer">
+      <p>&copy; 2024 Notícias App - Vinicius Devegili</p>
     </footer>
   );
 }

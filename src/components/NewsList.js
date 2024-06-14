@@ -1,23 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import '../styles.css'; 
-import descobertasCientificas from '../images/descobertas-cientificas.jpg'; // Importe a imagem
+import '../index.css'
 
 function NewsList({ news }) {
-    return (
-      <ul className="news-list">
-        {news.map((item) => (
-          <li key={item.id} className="news-item">
-            <Link to={`/news/${item.id}`} className="news-link">
-              <div className="news-thumbnail">
-                <img src={descobertasCientificas} alt={item.title} className="news-image" width="200" height="150" />
-              </div>
-              <div className="news-title">{item.title}</div>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    );
-  }
+  return (
+    <div className="news-list">
+      {news.map((item, index) => (
+        <div key={index} className="news-item">
+          {/* Adicione a classe `news-thumbnail` à imagem */}
+          <img src={item.urlToImage} alt={item.title} className="news-thumbnail" />
+          <a href={item.url} className="news-link" target="_blank" rel="noopener noreferrer">{item.title}</a>
+          <p className="news-description">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default NewsList;

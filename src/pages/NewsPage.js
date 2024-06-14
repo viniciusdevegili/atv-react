@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import NewsDetails from '../components/NewsDetails';
-import newsData from '../api/fetchData'; // Importe os dados das notícias
+import axiosData from '../api/axiosData'; // Importe a função axiosData
 
 function NewsPage() {
   const { id } = useParams();
-  const news = newsData.find((item) => item.id === parseInt(id));
+  const [news, setNews] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await axiosData();
+      const foundNews = data.find(item => item.id === parseInt(id));
+      setNews(foundNews);
+    };
+    fetchData();
+  }, [id]);
 
   return (
     <div>

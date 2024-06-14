@@ -1,21 +1,18 @@
 import React from 'react';
+import '../styles.css'; 
 
 function Formulario() {
   return (
-    <form>
+    <form className="formulario">
       <label>
         Nome:
-        <input type="text" name="nome" />
+        <input type="text" name="nome" className="input" />
       </label>
       <label>
         Email:
-        <input type="email" name="email" />
+        <input type="email" name="email" className="input" />
       </label>
-      <label>
-        Tema do Aplicativo:
-        <input type="text" name="tema" />
-      </label>
-      <button type="submit">Enviar</button>
+      <button type="submit" className="botao">Enviar</button>
     </form>
   );
 }

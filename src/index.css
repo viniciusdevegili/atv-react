@@ -11,3 +11,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+news-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Estilos para cada item de notícia */
+.news-item {
+  margin-bottom: 20px; /* Espaçamento entre os itens de notícia */
+}
+
+/* Estilos para o link da notícia */
+.news-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Estilos para o link da notícia ao passar o mouse */
+.news-link:hover {
+  color: #007bff; /* Mudança de cor ao passar o mouse */
+}
+
+/* Estilos para a imagem da notícia */
+.news-thumbnail img {
+  width: 100%; /* Imagem ocupa toda a largura do contêiner */
+  height: auto; /* Altura é ajustada automaticamente */
+  border-radius: 5px; /* Borda arredondada */
+}
+
+/* Estilos para o título da notícia */
+.news-title {
+  margin-top: 10px; /* Espaçamento entre a imagem e o título */
+  font-size: 18px; /* Tamanho do texto do título */
+  font-weight: bold; /* Negrito */
+}
+
+/* Estilos para o texto da notícia */
+.news-description {
+  margin-top: 10px; /* Espaçamento entre o título e o texto da notícia */
+  font-size: 16px; /* Tamanho do texto da notícia */
+}
+
